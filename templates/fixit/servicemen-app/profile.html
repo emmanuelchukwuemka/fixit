@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/servicemen-app/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:52:28 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fixit">
+    <meta name="keywords" content="fixit">
+    <meta name="author" content="fixit">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="../../assets/images/logo/favicon.png" type="image/x-icon">
+    <title>Fixit - Servicemen App</title>
+    <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+    <meta name="title-color" content="#00162E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="fixit">
+    <meta name="msapplication-TileImage" content="../../assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader start-->
+    <div class="loader-wrapper" id="loader">
+        <span class="loader"></span>
+    </div>
+    <!-- loader end -->
+
+    <!-- header starts -->
+    <header class="main-header">
+        <div class="custom-container">
+            <div class="header-panel">
+                <a href="#sidebar" class="sidebar-btn" data-bs-toggle="offcanvas">
+                    <i class="iconsax" data-icon="text-align-left"></i>
+                </a>
+                <h3>Profile</h3>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- profile section starts -->
+    <section class="section-b-space section-lg-t-space">
+        <div class="custom-container">
+            <div class="profile-background profile-wrapper white-background">
+                <div class="profile-part">
+                    <img class="img-fluid profile-bg" src="../../assets/images/background/profile-bg.png"
+                        alt="profile-bg">
+                    <div class="profile-image mt-3">
+                        <img id="output" class="img-fluid profile-pic" src="../../assets/images/profile/p11.png"
+                            alt="11">
+                        <i class="iconsax edit-icon" data-icon="edit-2"></i>
+                        <input id="file" type="file" onchange="loadFile(event)">
+                    </div>
+                    <h3 class="d-flex align-items-center justify-content-center gap-2">Smitha Williams <span><img
+                                src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg" alt="star "> 3.5</span></h3>
+                    <h6 class="fw-normal content-color mt-1">Member since 2022</h6>
+                    <h4 class="location"><i class="iconsax" data-icon="location"></i> New jersey , USA</h4>
+                </div>
+                <div class="line-box">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+                <div class="service-delivered-box">
+                    <div class="service-delivered-details">
+                        <h6>Services Delivered :</h6>
+                        <h5>250 service</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance-background profile-servicemen-box">
+                <div class="balance-details">
+                    <div>
+                        <h6>Type of Servicemen</h6>
+                        <h6 class="mt-1">No. of Experience</h6>
+                    </div>
+                    <div class="text-end">
+                        <h5 class="">Freelancer</h5>
+                        <h5 class="mt-1">5 years of exp.</h5>
+                    </div>
+                </div>
+                <img class="img-fluid hangging-img1" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/hangging.svg" alt="hangging">
+                <img class="img-fluid hangging-img2" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/hangging.svg" alt="hangging">
+            </div>
+
+            <div class="profile-list">
+                <h5 class=" text-capitalize inner-sub-title mb-2">Company Info</h5>
+                <ul class="setting-listing">
+                    <li class="w-100">
+                        <a href="profile-setting.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="user-2"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>Profile Setting</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="bank-details.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="bank"></i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>Bank Details</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="id-verifivcation.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="scan-3"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>ID Verification</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile-list">
+                <h5 class=" text-capitalize inner-sub-title mb-2">Other Details</h5>
+                <ul class="setting-listing">
+                    <li class="w-100">
+                        <a href="app-setting.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="setting-1"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>App Setting </h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="time-slot.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="clock"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>Time Slots</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="commission-details.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="discount-circle"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>Commission Details</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="review.html" class="setting-box">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="receipt-discount-2"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5>My Review</h5>
+                                <i class="iconsax icon" data-icon="chevron-right"> </i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile-list">
+                <h5 class=" text-capitalize inner-sub-title error-color mb-2">Alert zone</h5>
+                <ul class="setting-listing alert-list">
+                    <li class="w-100">
+                        <a href="#delete" class="setting-box" data-bs-toggle="modal">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="user-2-remove"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5 class="error-color">Delete Account</h5>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-100">
+                        <a href="#logout" class="setting-box" data-bs-toggle="modal">
+                            <div class="setting-icon">
+                                <i class="iconsax icon" data-icon="logout-2"> </i>
+                            </div>
+                            <div class="setting-content">
+                                <h5 class="error-color">Logout</h5>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- profile section end -->
+
+    <!-- add modal starts -->
+    <div class="modal fade centered-modal" id="share" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Share App</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body pb-3">
+                    <ul class="media-list">
+                        <li>
+                            <a href="#" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/whatsapp.svg"
+                                        alt="whatsapp">
+                                </div>
+                                <h5>Whatsapp</h5>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/facebook.svg"
+                                        alt="facebook">
+                                </div>
+                                <h5>Facebook</h5>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://slack.com/signin#/signin" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/instagram.svg"
+                                        alt="instagram">
+                                </div>
+                                <h5>Instagram</h5>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/accounts/login/" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/twitter.svg"
+                                        alt="twitter">
+                                </div>
+                                <h5>Twitter</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/accounts/login/" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/gmail.svg"
+                                        alt="gmail">
+                                </div>
+                                <h5>Email</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://telegr.am/user_mgt/login" class="media-box">
+                                <div class="media-image mx-auto">
+                                    <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/icon/svg/telegram.svg"
+                                        alt="telegram">
+                                </div>
+                                <h5>Telegram</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add modal end -->
+
+    <!-- delete account modal starts -->
+    <div class="modal centered-modal fade" id="delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Delete Account</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="successful-icon p-4 text-center">
+                        <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/delete.svg" alt="delete-account">
+                    </div>
+                    <p>Your account will be permanently erased if you choose to delete it. There is no way to get your
+                        info back.</p>
+                </div>
+                <div class="modal-footer grid-btn">
+                    <a href="#" data-bs-dismiss="modal" class="btn outline-btn w-50">Cancel</a>
+                    <a href="login.html" class="btn theme-btn w-50">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete account modal end -->
+
+    <!-- logout modal starts -->
+    <div class="modal centered-modal fade" id="logout" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Delete Account</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="successful-icon p-4 text-center">
+                        <img class="img-fluid icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/failed-booking.svg" alt="delete-account">
+                    </div>
+                    <p>Are you sure you want to logout from this application , now ?</p>
+                </div>
+                <div class="modal-footer grid-btn">
+                    <a href="profile.html" class="btn outline-btn w-50">Cancel</a>
+                    <a href="login.html" class="btn theme-btn w-50">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete account modal end -->
+    <!-- bottom navbar start -->
+    <div class="navbar-menu navbar-menu-full">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/home.svg" alt="home">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/home-fill.svg" alt="home">
+                    </div>
+                    <h5>Home</h5>
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/booking.svg" alt="booking">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/booking-fill.svg" alt="booking">
+                    </div>
+                    <h5>Booking</h5>
+                </a>
+            </li>
+
+            <li>
+                <a href="wallet.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/wallet-open.svg" alt="wallet">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/wallet-fill.svg" alt="wallet">
+                    </div>
+                    <h5>Wallet</h5>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="profile.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/profile.svg" alt="profile">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/profile-fill.svg" alt="profile">
+                    </div>
+                    <h5 class="active">Profile</h5>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- bottom navbar end -->
+
+    <!-- sidebar starts -->
+    <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header sidebar-header">
+            <div class="sidebar-logo">
+                <img class="img-fluid logo" src="../../assets/images/logo/logo.png" alt="logo">
+                <img class="img-fluid logo-dark" src="../../assets/images/logo/logo-white.png" alt="logo">
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="profile-background">
+                <div class="profile-part p-0">
+                    <div class="profile-image">
+                        <img id="output" class="img-fluid profile-pic" src="../../assets/images/profile/p11.png"
+                            alt="11">
+                    </div>
+
+                    <h3>Smitha Williams</h3>
+                    <h4>smithwilliams452@gmail.com</h4>
+                </div>
+            </div>
+
+
+            <ul class="profile-list">
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/user-app/index.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="user-2"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>User App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/provider-app/index.html" class="setting-box">
+                        <div class="setting-icon">
+                            <img class="img-fluid main-icon main-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/provider-app.svg"
+                                alt="provider-app">
+                        </div>
+                        <div class="setting-content">
+                            <h5>Provider App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-2.html" class="setting-box">
+                        <div class="setting-icon">
+                            <img class="img-fluid main-icon main-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/servicemen-app.svg"
+                                alt="servicemen-app">
+                        </div>
+                        <div class="setting-content">
+                            <h5>Servicemen App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="page-listing.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="book-closed"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>Template Pages</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/elements/elements-page.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="document-text-1"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5> Template Elements</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="repeat"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>RTL</h5>
+                            <div class="switch-btn">
+                                <input id="dir-switch" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="brush-3"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>Dark</h5>
+                            <div class="switch-btn">
+                                <input id="dark-switch" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bottom-sidebar">
+                <a href="login.html" class="pages">
+                    <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- panel-space start -->
+    <div class="panel-space"></div>
+    <!-- panel-space end -->
+
+    <!-- image change js -->
+    <script src="../../assets/js/image-change.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../../assets/js/iconsax.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="../../assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/servicemen-app/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:52:31 GMT -->
+</html>

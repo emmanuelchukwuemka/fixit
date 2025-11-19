@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/add-servicemen.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:29 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fixit">
+    <meta name="keywords" content="fixit">
+    <meta name="author" content="fixit">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="../../assets/images/logo/favicon.png" type="image/x-icon">
+    <title>Fixit - Provider App</title>
+    <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+    <meta name="title-color" content="#00162E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="fixit">
+    <meta name="msapplication-TileImage" content="../../assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader start-->
+    <div class="loader-wrapper" id="loader">
+        <span class="loader"></span>
+    </div>
+    <!-- loader end -->
+
+    <!-- header starts -->
+    <header class="main-header">
+        <div class="custom-container">
+            <div class="header-panel">
+                <a href="servicemen-list.html">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                </a>
+                <h3>Add Servicemen</h3>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- auth section starts -->
+    <section class="section-lg-t-space section-b-space">
+        <div class="custom-container">
+            <div class="profile-background profile-wrapper box-background px-0 pb-0">
+                <div class="profile-part">
+                    <img class="img-fluid profile-bg" src="../../assets/images/background/profile-bg.png"
+                        alt="profile-bg">
+                    <div class="profile-image mt-3">
+                        <img id="output" class="img-fluid profile-pic" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/add-circle.svg"
+                            alt="11">
+                        <i class="iconsax edit-icon" data-icon="edit-2"></i>
+                        <input id="file" type="file" onchange="loadFile(event)">
+                    </div>
+                </div>
+
+                <form class="auth-form pt-0">
+                    <div class="form-group">
+                        <label class="form-label mb-2" for="Inputname">Owner Name</label>
+                        <div class="form-input">
+                            <input type="text" class="form-control" id="Inputname" placeholder="Enter your username">
+                            <i class="iconsax" data-icon="user-2"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="form-label mb-2" for="Inputemail">Company Email</label>
+                        <div class="form-input">
+                            <input type="email" class="form-control" id="Inputemail" placeholder="Enter your email">
+                            <i class="iconsax" data-icon="mail"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="validationDefault01">Mobile Number</label>
+                        <div class="d-flex gap-2">
+                            <select class="form-select">
+                                <option selected>+1-212</option>
+                                <option value="1">+1-213</option>
+                                <option value="2">+1-702</option>
+                                <option value="3">+1-312</option>
+                                <option value="3">+1-617</option>
+                            </select>
+                            <div class="form-input w-100">
+                                <input type="number" class="form-control without-icon" id="validationDefault01"
+                                    placeholder="Enter your number" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Identity type</label>
+                        <select class="form-select w-100">
+                            <option selected="" disabled>Select Type</option>
+                            <option value="1">Driving licence</option>
+                            <option value="2">Passport</option>
+                            <option value="3">PAN card</option>
+                            <option value="4">Aadhar card</option>
+                            <option value="5">Bank passbook</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="Inputidentity">Identity No.</label>
+                        <div class="form-input w-100">
+                            <input type="number" class="form-control" id="Inputidentity" placeholder="Add identity no"
+                                required>
+                            <i class="iconsax" data-icon="scan-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label mb-2" for="formFileLg">Logo</label>
+                        <div class="upload-image">
+                            <input class="form-control upload-file" type="file" id="formFileLg">
+                            <i class="iconsax upload-icon" data-icon="logout-2"></i>
+                            <h5 class="content-color mt-1 mb-0">Upload logo image</h5>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Known Language</label>
+                        <select multiple data-placeholder="Add tools" class="w-100">
+                            <option selected>English</option>
+                            <option value="1">German</option>
+                            <option value="2">French</option>
+                            <option value="3">Spanish</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="Inputexperience">Experience</label>
+                        <div class="d-flex gap-2">
+                            <div class="form-input w-100">
+                                <input type="number" class="form-control" id="Inputexperience" placeholder="Add exp."
+                                    required>
+                                <i class="iconsax" data-icon="user-2"></i>
+                            </div>
+
+                            <select class="form-select w-auto">
+                                <option selected>Month</option>
+                                <option value="1">Year</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label mb-2" for="Inputnotes">Description</label>
+                        <div class="form-input">
+                            <textarea rows="3" class="form-control textarea-with-icon white-background" id="Inputnotes"
+                                placeholder="Enter details.."></textarea>
+                            <i class="iconsax textarea-icon" data-icon="document-text-1"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label mb-2" for="Inputpassword1">Password</label>
+                        <div class="form-input">
+                            <input type="password" class="form-control" id="Inputpassword1"
+                                placeholder="Enter your password">
+                            <i class="iconsax" data-icon="lock-2"></i>
+                        </div>
+                        <div class="show-hide toggler">
+                            <i class="iconsax eye-icon icon-eye" data-icon="eye"></i>
+                            <i class="iconsax eye-icon icon-eye-splash" data-icon="eye-slash"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="servicemen-list.html" class="btn theme-btn w-100 auth-btn">Add Servicemen</a>
+        </div>
+    </section>
+    <!-- auth section end -->
+
+    <!-- image change js -->
+    <script src="../../assets/js/image-change.js"></script>
+
+    <!-- password hide/show js -->
+    <script src="../../assets/js/password-show.js"></script>
+
+    <!-- image change js -->
+    <script src="../../assets/js/multi-select.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../../assets/js/iconsax.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="../../assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/add-servicemen.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:29 GMT -->
+</html>

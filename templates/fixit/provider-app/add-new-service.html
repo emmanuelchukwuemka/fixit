@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/add-new-service.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:29 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fixit">
+    <meta name="keywords" content="fixit">
+    <meta name="author" content="fixit">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="../../assets/images/logo/favicon.png" type="image/x-icon">
+    <title>Fixit - Provider App</title>
+    <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+    <meta name="title-color" content="#00162E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="fixit">
+    <meta name="msapplication-TileImage" content="../../assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader start-->
+    <div class="loader-wrapper" id="loader">
+        <span class="loader"></span>
+    </div>
+    <!-- loader end -->
+
+    <!-- header starts -->
+    <header class="main-header">
+        <div class="custom-container">
+            <div class="header-panel">
+                <a href="home.html">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                </a>
+
+                <h3>Add New Service</h3>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- add new service section starts -->
+    <section class="section-lg-t-space section-b-space">
+        <div class="custom-container">
+            <form class="auth-form mt-0">
+                <div class="form-group mt-0">
+                    <label class="form-label mb-2" for="output">Service Images</label>
+                    <div class="upload-image service-image">
+                        <input class="form-control upload-file" type="file" id="output" onchange="loadFile(event)">
+                        <i class="iconsax upload-icon" data-icon="logout-2"></i>
+                        <h5 class="content-color mb-0">Add new</h5>
+                    </div>
+
+                    <span>*The maximum image size is 2 Mb.</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="output1">Thumbnail Image</label>
+                    <div class="upload-image service-image">
+                        <input class="form-control upload-file" type="file" id="output1" onchange="loadFile(event)">
+                        <i class="iconsax upload-icon" data-icon="logout-2"></i>
+                        <h5 class="content-color mb-0">Add new</h5>
+                    </div>
+                    <span>*The maximum image size is 2 Mb.</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="Inputname">Service Name</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="Inputname" placeholder="Enter your name">
+                        <i class="iconsax" data-icon="user-2"></i>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label mb-2" for="Inputcategory">Category</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="Inputcategory" placeholder="Enter your category">
+                        <i class="iconsax" data-icon="color-filter"></i>
+
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label mb-2" for="Inputsubcategory">Sub Category</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="Inputsubcategory"
+                            placeholder="Enter your sub category">
+                        <i class="iconsax" data-icon="menu-4-dots"></i>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label mb-2" for="Inputcommission">Applicable commission</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control line-background" id="Inputcommission" value="30%"
+                            placeholder="Enter commission">
+                        <i class="iconsax" data-icon="discount-circle"></i>
+                        <span class="input-option">Percentage </span>
+                    </div>
+                    <span class="fw-normal error-color">Note : Highest commission rate will be applied
+                        automatically.</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="Inputnotes">Description</label>
+                    <div class="form-input">
+                        <textarea rows="3" class="form-control textarea-with-icon white-background" id="Inputnotes"
+                            placeholder="Enter description.."></textarea>
+                        <i class="iconsax textarea-icon" data-icon="document-text-1"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Inputduration">Duration</label>
+                    <div class="d-flex gap-2">
+                        <div class="form-input w-100">
+                            <input type="number" class="form-control" id="Inputduration" placeholder="Add time"
+                                required>
+                            <i class="iconsax textarea-icon" data-icon="hourglass"></i>
+                        </div>
+                        <select class="form-select w-auto">
+                            <option selected>Hour</option>
+                            <option value="1">Min</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="Inputservice1">Available service at</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="Inputservice1" placeholder="Enter select location">
+                        <i class="iconsax" data-icon="location"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="Inputservice2">Min. required servicemen</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="Inputservice2"
+                            placeholder="Enter no. of servicemen">
+                        <i class="iconsax" data-icon="tag-user"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Price</label>
+                    <div class="form-price white-background p-3 d-flex align-items-center flex-wrap gap-2 w-100">
+                        <div class="form-check form-check2">
+                            <input class="form-check-input" type="radio" name="RadioDefault" id="fixed45" checked>
+                            <label class="form-check-label title-color price-label" for="fixed45">Only price </label>
+                        </div>
+                        <div class="form-check form-check2">
+                            <input class="form-check-input" type="radio" name="RadioDefault" id="fixed123">
+                            <label class="form-check-label title-color price-label" for="fixed123">Price with
+                                discount</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Tax</label>
+                    <select class="form-select w-100">
+                        <option selected="" disabled>Select Type</option>
+                        <option value="1">GST (18%)</option>
+                        <option value="2">VAT (18%)</option>
+                    </select>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div class="form-group">
+                        <label class="form-label" for="Inputamount">Amount</label>
+                        <div class="form-input w-100">
+                            <input type="number" class="form-control" id="Inputamount" placeholder="Add amount"
+                                required>
+                            <i class="iconsax" data-icon="dollar-circle"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label without-line" for="Inputdiscount">Discount(%)</label>
+                        <div class="form-input w-100">
+                            <input type="number" class="form-control" id="Inputdiscount" placeholder="Add discount"
+                                required>
+                            <i class="iconsax" data-icon="receipt-discount-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mb-2" for="Inputnotes1">Featured points</label>
+                    <div class="form-input">
+                        <textarea rows="3" class="form-control textarea-with-icon white-background" id="Inputnotes1"
+                            placeholder="Write a note"></textarea>
+                        <i class="iconsax textarea-icon" data-icon="document-text-1"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="d-flex align-items-start justify-content-between gap-2 custom-border-radius white-background p-3 mt-3">
+                    <div>
+                        <h5 class="fw-medium title-color">status</h5>
+                        <p class="fw-normal content-color mt-2">This service can be turned on and off based on your
+                            needs.</p>
+                    </div>
+                    <div class="switch-btn">
+                        <input type="checkbox" checked>
+                    </div>
+                </div>
+            </form>
+            <a href="service-list.html" class="btn theme-btn w-100 auth-btn">Add Service</a>
+        </div>
+    </section>
+    <!-- add new service section end -->
+
+    <!-- image change js -->
+    <script src="../../assets/js/image-change.js"></script>
+
+    <!-- iconsax js -->
+    <script src="../../assets/js/iconsax.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="../../assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/add-new-service.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:29 GMT -->
+</html>

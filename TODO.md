@@ -1,0 +1,2 @@
+- [ ] Remove empty .left div from index.html
+- [ ] Center the .right div and make layout professional

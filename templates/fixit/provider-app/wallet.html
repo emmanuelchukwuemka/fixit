@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/wallet.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:10 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fixit">
+    <meta name="keywords" content="fixit">
+    <meta name="author" content="fixit">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="../../assets/images/logo/favicon.png" type="image/x-icon">
+    <title>Fixit - Provider App</title>
+    <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+    <meta name="title-color" content="#00162E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="fixit">
+    <meta name="msapplication-TileImage" content="../../assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader start-->
+    <div class="loader-wrapper" id="loader">
+        <span class="loader"></span>
+    </div>
+    <!-- loader end -->
+
+    <!-- header starts -->
+    <header class="main-header">
+        <div class="custom-container">
+            <div class="header-panel">
+                <a href="#sidebar" class="sidebar-btn" data-bs-toggle="offcanvas">
+                    <i class="iconsax" data-icon="text-align-left"></i>
+                </a>
+                <h3>Wallet</h3>
+                <a href="notification.html">
+                    <i class="iconsax icon-btn notification-icon" data-icon="bell-2"> </i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- wallet balance section starts -->
+    <section class="section-lg-t-space">
+        <div class="custom-container">
+            <div class="wallet-balance-box">
+                <img class="img-fluid wallet-icon" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/wallet-open.svg" alt="p8">
+                <div class="wallet-details">
+                    <div>
+                        <h5>Today’s wallet bal.</h5>
+                        <h4>$2,562.23</h4>
+                    </div>
+                    <a href="#withdraw" data-bs-toggle="offcanvas"
+                        class="btn-sm theme-btn withdraw-btn theme-color">Withdraw</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- wallet balance section end -->
+
+    <!-- payment history section starts -->
+    <section class="section-b-space">
+        <div class="custom-container">
+            <div class="title">
+                <h2>Payment History</h2>
+            </div>
+
+            <ul class="payment-history-list">
+                <li class="payment-history-box">
+                    <div class="payment-service-head mb-2">
+                        <div>
+                            <h5 class="fw-medium title-color">Furnishing & carpentry</h5>
+                            <h3 class="fw-semibold title-color mt-1">$25.30</h3>
+                        </div>
+                        <h6 class="payment-id">#032</h6>
+                    </div>
+
+                    <div class="bill-box">
+                        <div class="bill-box-content">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="fw-medium content-color">Payment ID</h5>
+                                <h5 class="fw-medium title-color">#1520</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Method type</h5>
+                                <h5 class="fw-medium title-color">Wallet</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Status</h5>
+                                <h5 class="fw-medium success-color">Paid</h5>
+                            </div>
+                        </div>
+                        <img class="img-fluid bottom-design" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/dots-design.svg"
+                            alt="dots-design">
+                    </div>
+
+                    <div class="customer-box">
+                        <div class="customer-image">
+                            <img class="img-fluid customer-pic" src="../../assets/images/profile/p17.png" alt="p17">
+                        </div>
+                        <div class="customer-content">
+                            <div>
+                                <h6 class="content-color fw-medium">Customer</h6>
+                                <h5 class="name fw-medium title-color mt-1">Stella Milevski</h5>
+                            </div>
+                            <i class="iconsax arrow-icon" data-icon="arrow-right"> </i>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="payment-history-box">
+                    <div class="payment-service-head mb-2">
+                        <div>
+                            <h5 class="fw-medium title-color">Wall painting</h5>
+                            <h3 class="fw-semibold title-color mt-1">$10.45</h3>
+                        </div>
+                        <h6 class="payment-id">#033</h6>
+                    </div>
+
+                    <div class="bill-box">
+                        <div class="bill-box-content">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="fw-medium content-color">Payment ID</h5>
+                                <h5 class="fw-medium title-color">#1548</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Method type</h5>
+                                <h5 class="fw-medium title-color">Wallet</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Status</h5>
+                                <h5 class="fw-medium success-color">Advance Paid</h5>
+                            </div>
+                        </div>
+                        <img class="img-fluid bottom-design" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/dots-design.svg"
+                            alt="dots-design">
+                    </div>
+
+                    <div class="customer-box">
+                        <div class="customer-image">
+                            <img class="img-fluid customer-pic" src="../../assets/images/profile/p10.png" alt="p17">
+                        </div>
+                        <div class="customer-content">
+                            <div>
+                                <h6 class="content-color fw-medium">Customer</h6>
+                                <h5 class="name fw-medium title-color mt-1">Lynn Tanner</h5>
+                            </div>
+                            <i class="iconsax arrow-icon" data-icon="arrow-right"> </i>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="payment-history-box">
+                    <div class="payment-service-head mb-2">
+                        <div>
+                            <h5 class="fw-medium title-color">Chimney Sweeping</h5>
+                            <h3 class="fw-semibold title-color mt-1">$20.10</h3>
+                        </div>
+                        <h6 class="payment-id">#035</h6>
+                    </div>
+
+                    <div class="bill-box">
+                        <div class="bill-box-content">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="fw-medium content-color">Payment ID</h5>
+                                <h5 class="fw-medium title-color">#1560</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Method type</h5>
+                                <h5 class="fw-medium title-color">Wallet</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <h5 class="fw-medium content-color">Cash</h5>
+                                <h5 class="fw-medium success-color">Paid</h5>
+                            </div>
+                        </div>
+                        <img class="img-fluid bottom-design" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/dots-design.svg"
+                            alt="dots-design">
+                    </div>
+
+                    <div class="customer-box">
+                        <div class="customer-image">
+                            <img class="img-fluid customer-pic" src="../../assets/images/profile/p15.png" alt="p17">
+                        </div>
+                        <div class="customer-content">
+                            <div>
+                                <h6 class="content-color fw-medium">Customer</h6>
+                                <h5 class="name fw-medium title-color mt-1">Michael Knight</h5>
+                            </div>
+                            <i class="iconsax arrow-icon" data-icon="arrow-right"> </i>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- payment history section end -->
+
+    <!-- add money offcanvas starts -->
+    <div class="offcanvas offcanvas-bottom service-booking-offcanvas" tabindex="-1" id="withdraw">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasBottomLabel">Withdraw Money</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="service-booking-box align-items-start flex-column p-3">
+                <h5 class="title-color fw-medium">Select Type</h5>
+                <ul class="option-list d-flex align-items-center gap-3 w-100 mb-2 p-0 border-0 shadow-none">
+                    <li class="py-0 border-0">
+                        <div class="form-check gap-2">
+                            <input class="form-check-input" type="radio" name="RadioDefault" id="fixed45" checked>
+                            <label class="form-check-label" for="fixed45">
+                                <span class="check-box"></span>
+                                <span class="name title-color">Bank</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="py-0 border-0">
+                        <div class="form-check gap-2">
+                            <input class="form-check-input" type="radio" name="RadioDefault" id="fixed123">
+                            <label class="form-check-label" for="fixed123">
+                                <span class="check-box"></span>
+                                <span class="name title-color">Paypal</span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <form class="auth-form mt-0 p-0 w-100">
+                    <h5 class="text-start mb-2">Add from</h5>
+                    <select class="form-select w-100 border-0">
+                        <option selected="" disabled>Select payment gateway</option>
+                        <option value="1">Razer pay</option>
+                        <option value="2">Stripe</option>
+                    </select>
+
+                    <div class="form-group w-100">
+                        <label class="form-label fw-medium without-line mb-2" for="Inputamount">Amount</label>
+                        <div class="form-input">
+                            <input type="number" class="form-control border-0" id="Inputamount"
+                                placeholder="Enter amount">
+                            <i class="iconsax" data-icon="money-in"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label mb-2 without-line" for="Inputnotes">Description</label>
+                        <div class="form-input">
+                            <textarea rows="3" class="form-control textarea-with-icon white-background w-100"
+                                id="Inputnotes" placeholder="Enter details.."></textarea>
+                            <i class="iconsax textarea-icon" data-icon="document-text-1"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mt-3">
+                <a href="wallet.html" class="btn outline-btn w-50">Cancel</a>
+                <a href="wallet.html" class="btn theme-btn w-50">Withdraw</a>
+            </div>
+        </div>
+    </div>
+    <!-- add money offcanvas end -->
+
+    <!-- modal starts -->
+    <div class="modal fade centered-modal add-modal" id="add-modal" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="add-listing">
+                        <li>
+                            <a href="add-new-service.html">
+                                <div class="listing-img-background box-background rounded-circle">
+                                    <img class="img-fluid listing-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/add-service.svg"
+                                        alt="service">
+                                </div>
+                                <h5>Add new Service</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="add-servicemen.html">
+                                <div class="listing-img-background box-background rounded-circle">
+                                    <img class="img-fluid listing-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/add-servicemen.svg"
+                                        alt="servicemen">
+                                </div>
+                                <h5>Add new Servicemen</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- sidebar starts -->
+    <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header sidebar-header">
+            <div class="sidebar-logo">
+                <img class="img-fluid logo" src="../../assets/images/logo/logo.png" alt="logo">
+                <img class="img-fluid logo-dark" src="../../assets/images/logo/logo-white.png" alt="logo">
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="profile-background">
+                <div class="profile-part p-0">
+                    <div class="profile-image">
+                        <img id="output" class="img-fluid profile-pic" src="../../assets/images/profile/p11.png"
+                            alt="11">
+                    </div>
+
+                    <h3>Smitha Williams</h3>
+                    <h4>smithwilliams452@gmail.com</h4>
+                </div>
+            </div>
+
+
+            <ul class="profile-list">
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/user-app/index.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="user-2"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>User App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-2.html" class="setting-box">
+                        <div class="setting-icon">
+                            <img class="img-fluid main-icon main-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/provider-app.svg"
+                                alt="provider-app">
+                        </div>
+                        <div class="setting-content">
+                            <h5>Provider App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/servicemen-app/index.html" class="setting-box">
+                        <div class="setting-icon">
+                            <img class="img-fluid main-icon main-img" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/servicemen-app.svg"
+                                alt="servicemen-app">
+                        </div>
+                        <div class="setting-content">
+                            <h5>Servicemen App</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="page-listing.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="book-closed"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>Template Pages</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/fixit/template/elements/elements-page.html" class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="document-text-1"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5> Template Elements</h5>
+                            <i class="iconsax arrow" data-icon="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="repeat"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>RTL</h5>
+                            <div class="switch-btn">
+                                <input id="dir-switch" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="setting-box">
+                        <div class="setting-icon">
+                            <i class="iconsax main-icon" data-icon="brush-3"> </i>
+                        </div>
+                        <div class="setting-content">
+                            <h5>Dark</h5>
+                            <div class="switch-btn">
+                                <input id="dark-switch" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bottom-sidebar">
+                <a href="login.html" class="pages">
+                    <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- panel-space start -->
+    <div class="panel-space"></div>
+    <!-- panel-space end -->
+
+    <!-- bottom navbar start -->
+    <div class="navbar-menu">
+
+        <ul>
+            <li>
+                <a href="home.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/home.svg" alt="home">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/home-fill.svg" alt="home">
+                    </div>
+                    <h5>Home</h5>
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/booking.svg" alt="booking">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/booking-fill.svg" alt="booking">
+                    </div>
+                    <h5>Booking</h5>
+                </a>
+            </li>
+
+            <li>
+                <a href="#add-modal" class="scanner-btn" data-bs-toggle="modal">
+                    <i class="iconsax icon-btn" data-icon="add"></i>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="wallet.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/wallet-open.svg" alt="wallet">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/wallet-fill.svg" alt="wallet">
+                    </div>
+                    <h5 class="active">Wallet</h5>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/profile.svg" alt="profile">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/profile-fill.svg" alt="profile">
+                    </div>
+                    <h5>Profile</h5>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- bottom navbar end -->
+
+
+    <!-- iconsax js -->
+    <script src="../../assets/js/iconsax.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="../../assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/wallet.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:10 GMT -->
+</html>

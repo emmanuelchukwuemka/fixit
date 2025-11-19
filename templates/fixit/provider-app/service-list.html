@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/service-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:18 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fixit">
+    <meta name="keywords" content="fixit">
+    <meta name="author" content="fixit">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="../../assets/images/logo/favicon.png" type="image/x-icon">
+    <title>Fixit - Provider App</title>
+    <link rel="apple-touch-icon" href="../../assets/images/logo/favicon.png">
+    <meta name="title-color" content="#00162E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="fixit">
+    <meta name="msapplication-TileImage" content="../../assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <!-- loader start-->
+    <div class="loader-wrapper" id="loader">
+        <span class="loader"></span>
+    </div>
+    <!-- loader end -->
+
+    <!-- header starts -->
+    <header class="main-header">
+        <div class="custom-container">
+            <div class="header-panel">
+                <a href="home.html">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                </a>
+
+                <h3>Service list</h3>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="search.html">
+                        <i class="iconsax icon-btn" data-icon="search-normal-2"></i>
+                    </a>
+                    <a href="add-new-service.html">
+                        <i class="iconsax icon-btn" data-icon="add"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- service list section starts -->
+    <section class="section-lg-t-space section-b-space">
+        <div class="box-background">
+            <div class="title px-20 py-3 mb-0">
+                <h6 class="fw-semibold content-color">Categories</h6>
+            </div>
+
+            <ul class="sub-categories-list custom-scrollbar">
+                <li class="active">
+                    <div class="categories-box white-background">
+                        <svg class="categories-icon">
+                            <use href="https://themes.pixelstrap.com/pwa/fixit/assets/images/categories/sprite.svg#ac-repair"></use>
+                        </svg>
+                    </div>
+                    <h5 class="categories-name mt-2 mb-3 text-center">Ac Repair</h5>
+                </li>
+
+                <li>
+                    <div class="categories-box white-background">
+                        <svg class="categories-icon">
+                            <use href="https://themes.pixelstrap.com/pwa/fixit/assets/images/categories/sprite.svg#installation"></use>
+                        </svg>
+                    </div>
+                    <h5 class="categories-name mt-2 mb-3 text-center title-color">Installation</h5>
+                </li>
+
+                <li>
+                    <div class="categories-box white-background">
+                        <svg class="categories-icon">
+                            <use href="https://themes.pixelstrap.com/pwa/fixit/assets/images/categories/sprite.svg#servicing"></use>
+                        </svg>
+                    </div>
+                    <h5 class="categories-name mt-2 mb-3 text-center title-color">Servicing</h5>
+                </li>
+
+                <li>
+                    <div class="categories-box white-background">
+                        <svg class="categories-icon">
+                            <use href="https://themes.pixelstrap.com/pwa/fixit/assets/images/categories/sprite.svg#painter"></use>
+                        </svg>
+                    </div>
+                    <h5 class="categories-name mt-2 mb-3 text-center title-color">Painter</h5>
+                </li>
+                <li>
+                    <div class="categories-box white-background">
+                        <svg class="categories-icon">
+                            <use href="https://themes.pixelstrap.com/pwa/fixit/assets/images/categories/sprite.svg#electrician"></use>
+                        </svg>
+                    </div>
+                    <h5 class="categories-name mt-2 mb-3 text-center title-color">Electrician</h5>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-3">
+            <ul class="nav nav-Tabs tab-style2 service-list-tab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="cleaning-tab" data-bs-toggle="tab"
+                        data-bs-target="#cleaning-tab-pane" type="button" role="tab">Cleaning</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="install-tab" data-bs-toggle="tab" data-bs-target="#install-tab-pane"
+                        type="button" role="tab">Installation</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hanging-tab" data-bs-toggle="tab" data-bs-target="#hanging-tab-pane"
+                        type="button" role="tab">Hanging</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="servicing-tab" data-bs-toggle="tab"
+                        data-bs-target="#servicing-tab-pane" type="button" role="tab">Servicing</button>
+                </li>
+            </ul>
+            <div class="custom-container">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade pt-3 show active" id="cleaning-tab-pane" role="tabpanel" tabindex="0">
+                        <ul class="populer-service-list">
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/7.jpg" alt="7">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Water Drop Solution</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255 Booked</h6>
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/11.jpg"
+                                        alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Compressor Fitting</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/2.jpg" alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Chimney sweeping</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Carpenter</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade pt-3" id="install-tab-pane" role="tabpanel" tabindex="0">
+                        <ul class="populer-service-list">
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/11.jpg"
+                                        alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Compressor Fitting</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/2.jpg" alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Chimney sweeping</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Carpenter</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/7.jpg" alt="7">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Water Drop Solution</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade pt-3" id="hanging-tab-pane" role="tabpanel" tabindex="0">
+                        <ul class="populer-service-list">
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/7.jpg" alt="7">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Water Drop Solution</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/11.jpg"
+                                        alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Compressor Fitting</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/2.jpg" alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Chimney sweeping</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Carpenter</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade pt-3" id="servicing-tab-pane" role="tabpanel" tabindex="0">
+                        <ul class="populer-service-list">
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/11.jpg"
+                                        alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Compressor Fitting</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/2.jpg" alt="11">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Chimney sweeping</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Carpenter</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="populer-service-box">
+                                <a href="service-details.html">
+                                    <img class="img-fluid service-img" src="../../assets/images/service/7.jpg" alt="7">
+                                </a>
+                                <div class="populer-service-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="service-details.html">
+                                            <h5 class="fw-medium title-color">Ac Water Drop Solution</h5>
+                                        </a>
+                                        <h4 class="fw-semibold title-color">$12.00</h4>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <ul class="service-content-list">
+                                            <li class="pe-2">
+                                                <h6 class="fw-medium content-color">Ac Repair</h6>
+
+                                            </li>
+                                            <li class="ps-2">
+                                                <h6 class="fw-medium content-color"> <i class="iconsax icon"
+                                                        data-icon="receipt-4"></i> 255
+                                                    Booked</h6>
+                                            </li>
+                                        </ul>
+                                        <h6 class="d-flex align-items-center gap-1 title-color"><img
+                                                class="img-fluid star" src="https://themes.pixelstrap.com/pwa/fixit/assets/images/svg/star-fill.svg"
+                                                alt="star"> 4.0
+                                        </h6>
+                                    </div>
+
+                                    <div class="status-part">
+                                        <h6>Active status</h6>
+                                        <div class="switch-btn">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service-list section end -->
+
+    <!-- iconsax js -->
+    <script src="../../assets/js/iconsax.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="../../assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from themes.pixelstrap.com/pwa/fixit/template/provider-app/service-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 08:59:20 GMT -->
+</html>

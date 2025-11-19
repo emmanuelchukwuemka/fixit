@@ -1,0 +1,603 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixit - Professional Service Booking Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --theme-color: 84, 101, 255;
+            --theme-color2: 0, 22, 46;
+            --theme-color3: 244, 247, 255;
+            --theme-color4: 232, 240, 255;
+            --theme-color5: 248, 249, 255;
+            --theme-color6: 240, 242, 255;
+            --theme-color7: 244, 245, 255;
+            --theme-color8: 249, 250, 255;
+            --theme-color9: 252, 253, 255;
+            --theme-color10: 254, 254, 255;
+            --theme-color11: 255, 255, 255;
+            --theme-color12: 0, 0, 0;
+            --theme-color13: 51, 51, 51;
+            --theme-color14: 102, 102, 102;
+            --theme-color15: 153, 153, 153;
+            --success-color: 78, 205, 196;
+            --warning-color: 255, 107, 107;
+            --gradient-primary: linear-gradient(135deg, rgba(var(--theme-color), 1), rgba(124, 143, 255, 1));
+            --gradient-secondary: linear-gradient(135deg, rgba(var(--warning-color), 1), rgba(255, 142, 142, 1));
+            --gradient-tertiary: linear-gradient(135deg, rgba(var(--success-color), 1), rgba(110, 215, 211, 1));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, rgba(var(--theme-color3), 1) 0%, rgba(var(--theme-color4), 1) 50%, rgba(var(--theme-color5), 1) 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(var(--theme-color), 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(var(--theme-color2), 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(var(--success-color), 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-15px) rotate(1deg); }
+            66% { transform: translateY(15px) rotate(-1deg); }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(var(--theme-color11), 0.95);
+            backdrop-filter: blur(25px);
+            padding: 60px 40px;
+            border-radius: 24px;
+            box-shadow: 
+                0 25px 50px rgba(var(--theme-color), 0.2),
+                0 10px 30px rgba(var(--theme-color), 0.15),
+                0 0 0 1px rgba(var(--theme-color11), 0.9),
+                inset 0 0 0 1px rgba(var(--theme-color11), 0.5);
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            width: 95%;
+            animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border: 1px solid rgba(var(--theme-color11), 0.7);
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(var(--theme-color11), 0.2) 0%, transparent 70%);
+            transform: rotate(30deg);
+            z-index: -1;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .logo {
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 24px;
+            box-shadow: 
+                0 15px 35px rgba(var(--theme-color), 0.4),
+                0 5px 15px rgba(var(--theme-color), 0.3),
+                inset 0 0 20px rgba(var(--theme-color11), 0.5);
+            border: 3px solid rgba(var(--theme-color11), 0.8);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 
+                0 20px 45px rgba(var(--theme-color), 0.5),
+                0 10px 25px rgba(var(--theme-color), 0.4),
+                inset 0 0 30px rgba(var(--theme-color11), 0.7);
+        }
+
+        h1 {
+            color: rgba(var(--theme-color2), 1);
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, rgba(var(--theme-color), 1), rgba(var(--theme-color2), 1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite alternate;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(var(--theme-color), 0.1);
+        }
+
+        @keyframes glow {
+            from { 
+                text-shadow: 
+                    0 0 20px rgba(var(--theme-color), 0.5),
+                    0 0 30px rgba(var(--theme-color), 0.3);
+            }
+            to { 
+                text-shadow: 
+                    0 0 30px rgba(var(--theme-color), 0.7),
+                    0 0 40px rgba(var(--theme-color), 0.5),
+                    0 0 50px rgba(var(--theme-color), 0.3);
+            }
+        }
+
+        .subtitle {
+            color: rgba(var(--theme-color14), 1);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .role-selection {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 45px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 12px 30px rgba(var(--theme-color), 0.4),
+                0 5px 15px rgba(var(--theme-color), 0.3);
+            border: none;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(var(--theme-color11), 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(var(--theme-color11), 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button:hover::after {
+            opacity: 1;
+        }
+
+        .button:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 
+                0 20px 40px rgba(var(--theme-color), 0.5),
+                0 10px 25px rgba(var(--theme-color), 0.4);
+        }
+
+        .button:active {
+            transform: translateY(-2px) scale(0.98);
+            box-shadow: 
+                0 8px 20px rgba(var(--theme-color), 0.4),
+                0 4px 10px rgba(var(--theme-color), 0.3);
+        }
+
+        .button.user {
+            background: var(--gradient-primary);
+            box-shadow: 
+                0 12px 30px rgba(var(--theme-color), 0.4),
+                0 5px 15px rgba(var(--theme-color), 0.3);
+        }
+
+        .button.provider {
+            background: var(--gradient-secondary);
+            box-shadow: 
+                0 12px 30px rgba(var(--warning-color), 0.4),
+                0 5px 15px rgba(var(--warning-color), 0.3);
+        }
+
+        .button.provider:hover {
+            background: var(--gradient-secondary);
+            box-shadow: 
+                0 20px 40px rgba(var(--warning-color), 0.5),
+                0 10px 25px rgba(var(--warning-color), 0.4);
+        }
+
+        .button.servicemen {
+            background: var(--gradient-tertiary);
+            box-shadow: 
+                0 12px 30px rgba(var(--success-color), 0.4),
+                0 5px 15px rgba(var(--success-color), 0.3);
+        }
+
+        .button.servicemen:hover {
+            background: var(--gradient-tertiary);
+            box-shadow: 
+                0 20px 40px rgba(var(--success-color), 0.5),
+                0 10px 25px rgba(var(--success-color), 0.4);
+        }
+
+        .features {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .feature {
+            padding: 25px 20px;
+            background: rgba(var(--theme-color11), 0.9);
+            border-radius: 18px;
+            box-shadow: 
+                0 8px 25px rgba(var(--theme-color), 0.15),
+                0 3px 10px rgba(var(--theme-color), 0.1),
+                inset 0 0 0 1px rgba(var(--theme-color11), 0.7);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(var(--theme-color11), 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 15px 35px rgba(var(--theme-color), 0.25),
+                0 5px 15px rgba(var(--theme-color), 0.15),
+                inset 0 0 0 1px rgba(var(--theme-color11), 0.9);
+        }
+
+        .feature:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: rgba(var(--theme-color), 1);
+            margin-bottom: 15px;
+            text-shadow: 0 5px 15px rgba(var(--theme-color), 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .feature-title {
+            font-weight: 700;
+            color: rgba(var(--theme-color2), 1);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-desc {
+            font-size: 1rem;
+            color: rgba(var(--theme-color14), 1);
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: rgba(var(--theme-color14), 1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 25px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+
+            .button {
+                padding: 18px 35px;
+                font-size: 1rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .logo img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .role-selection {
+                gap: 20px;
+            }
+
+            .button {
+                padding: 16px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/assets/images/logo/favicon.png" alt="Fixit Logo">
+        </div>
+        <h1>Fixit</h1>
+        <p class="subtitle">Professional Service Booking Platform - Connecting Customers with Verified Service Providers</p>
+
+        <div class="role-selection">
+            <a href="/user/" class="button user">👤 User Dashboard</a>
+            <a href="/provider/" class="button provider">🏢 Provider Portal</a>
+            <a href="/servicemen/" class="button servicemen">🔧 Servicemen Panel</a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Instant Booking</div>
+                <div class="feature-desc">Book services in seconds with our streamlined process</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⭐</div>
+                <div class="feature-title">Quality Assured</div>
+                <div class="feature-desc">Verified professionals with customer reviews</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-title">Secure Payments</div>
+                <div class="feature-desc">Safe transactions with money-back guarantee</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 Fixit Service Booking Platform. All rights reserved.
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixit - Booking Onboarding</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'DM Sans', sans-serif; }
+
+        body {
+            background: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Shape */
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/static/fixit/images/oo.png') center/cover no-repeat;
+            opacity: 0.22;
+            pointer-events: none;
+        }
+
+        .right {
+            width: 90%;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.5);
+            padding: 45px;
+            border-radius: 20px;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        .logo img {
+            width: 80px;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        h1 { text-align: center; font-size: 2.5rem; font-weight: 900; color: #00162E; margin-bottom: 10px; }
+        .subtitle { text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 35px; }
+
+        .role-selection { display: flex; flex-direction: column; gap: 20px; }
+
+        .button {
+            padding: 16px;
+            background: linear-gradient(135deg, #FF7300, #d95f00);
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: .3s;
+        }
+
+        .button:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(255,115,0,0.35); }
+
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .feature-title { font-size: 1.15rem; font-weight: 700; color: #00162E; margin-bottom: 8px; }
+        .feature-desc { font-size: 0.95rem; color: #666; line-height: 1.4; }
+
+    </style>
+</head>
+<body>
+
+<div class="bg-img"></div>
+
+<div class="wrapper">
+
+    <div class="right">
+        <div class="logo"><img src="/assets/images/logo/favicon.png" alt="Fixit Logo"></div>
+
+        <h1>Fixit</h1>
+        <p class="subtitle">Book Verified Professionals Fast & Easily</p>
+
+        <div class="role-selection">
+            <a href="/user/" class="button">User Dashboard</a>
+            <a href="/provider/" class="button">Provider Portal</a>
+            <a href="/servicemen/" class="button">Servicemen Panel</a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-title">Instant Booking</div>
+                <div class="feature-desc">Book services instantly with our smart and fast booking system.</div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-title">Quality Assured</div>
+                <div class="feature-desc">Only trained & verified service providers are allowed on Fixit.</div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-title">24/7 Support</div>
+                <div class="feature-desc">We assist you anytime with live support and quick response.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
